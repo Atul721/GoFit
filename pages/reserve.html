@@ -22,6 +22,9 @@
                 <h2>Reserve Product</h2>
                <a href="index.html"> <span class="material-symbols-outlined">Close</span></a>
              </div>
+             <div id="productreservedetail" style="margin-bottom:30px;color: rgb(13, 13, 14);">
+
+             </div>
              <div class="form_wrap fullname">
                 <div class="form_item">
                     <label>First Name</label>
@@ -64,6 +67,19 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="../service/dataservice.js" type="text/javasript"></script>
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+const productid = urlParams.get('id');
+var pname = "";
+var price="";
+            for(var i=0;i<data.length;i++){                          
+               if(productid==data[i].id){
+                productname=data[i].title;
+                price=data[i].price;
+                break;
+               }
+              } 
+document.getElementById('productreservedetail').innerHTML="You are about to reserve the " +productname+" product and the price is "+price;
+
 function reserveItem(){
 var firstname= $("#fname").val();
 var lastname=$("#lname").val();
@@ -77,6 +93,8 @@ else{
     alert("Please fill all the fields");
 }
 }
+
+
 </script>
 </body>
 </html>
