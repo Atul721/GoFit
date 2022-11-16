@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFit Application</title>
+    <link rel="stylesheet" href="../styles/details.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav container1">
+            <img src="../images/logo.png" style="height:100px ; width:100px;">
+        </div>
+    </header>
+
+    <section class="product details">
+        <h2 class="page-title">Details</h2>
+        <div class="product-content">
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../service/dataservice.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(() => {
+            var search = document.location.search;
+            data.forEach((product) => {
+                if (search.indexOf(product.id) != -1) {
+
+                    let imageList = ""
+
+                    product.img.map((x)=>{
+                       imageList = imageList + `<img src="${x}" alt="" class="small-img" onclick="changeImage('${x}')"/>`
+                    })
+
+                    var productList = '<div class="product-detail-box">' +
+                        '<img id="mainImg" src="' + product.img[0] + '" alt="" class="product-det-img">' +
+                        `<div style="display:flex; height:70px; margin-right:10px;">${imageList}</div>`+
+                        '<h2 class="product-title">' + product.title + '</h2>' +
+                        '<a href="reserve.html"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>' +
+                        '<p class="Rating">' + product.rating + '</p>' +
+                        '<span class="price">' + product.price + '</span>' +
+                        '<p class="description">' + product.description + '</p>' +
+                        '<p class="feature">' + product.feature + '</p>' +
+                        `<video type="video/mp4" autoplay="autoplay" controls class="product-video"><source src="${product.video}"/></video>` +
+                        '</div>';
+                    $('.product-content').append(productList);
+                }
+
+            });
+        });
+
+        function changeImage (x){
+            console.log(x)
+            document.getElementById("mainImg").src = x
+        }
+
+    </script>
+</body>
+
+</html>
