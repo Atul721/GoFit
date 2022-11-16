@@ -65,8 +65,9 @@
        </div>
 <script src="../jsfiles/index.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="../service/dataservice.js" type="text/javasript"></script>
+<script src="../service/dataservice.js" type="text/javascript"></script>
 <script>
+  $(document).ready(()=>{
   const urlParams = new URLSearchParams(window.location.search);
 const productid = urlParams.get('id');
 var pname = "";
@@ -78,8 +79,9 @@ var price="";
                 break;
                }
               } 
+              
 document.getElementById('productreservedetail').innerHTML="You are about to reserve the " +productname+" product and the price is "+price;
-
+            });
 function reserveItem(){
 var firstname= $("#fname").val();
 var lastname=$("#lname").val();

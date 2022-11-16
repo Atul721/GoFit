@@ -86,7 +86,7 @@ console.log(data);
                 var productList = '<div class="product-box">'+
             '<a href="details.html?id='+product.id+'"><img src="'+product.img[0]+'" alt="" class="product-img"></a>'+
             '<h2 class="product-title">'+product.title+'</h2>'+
-            '<span class="fa fa star">'+product.rating+'</span>'+
+            '<span class="rating">'+product.rating+'</span>'+
             '<p class="price">'+product.price+'</p>'+
            '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
             '</div>';
@@ -105,8 +105,9 @@ data.forEach( (product)=> {
     var  productList = '<div class="product-box">'+
             '<img src="'+product.img[0]+'" alt="" class="product-img">'+
             '<h2 class="product-title">'+product.title+'</h2>'+
+            '<span class="rating">'+product.rating+'</span>'+
             '<span class="price">'+product.price+'</span>'+
-        '<a href="reserve.html"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
+        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
             '</div>';
         $('.shop-content').append(productList);
 
@@ -119,8 +120,9 @@ if(data[i].title.toLowerCase()==productname.toLowerCase()){
 var  productList = '<div class="product-box">'+
             '<img src="'+data[i].img[0]+'" alt="" class="product-img">'+
             '<h2 class="product-title">'+data[i].title+'</h2>'+
+            '<span class="rating">'+data[i].rating+'</span>'+
             '<span class="price">'+data[i].price+'</span>'+
-        '<a href="reserve.html"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
+        '<a href="reserve.html?id='+data[i].id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
             '</div>';
         $('.shop-content').append(productList);            
 
