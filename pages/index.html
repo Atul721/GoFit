@@ -15,8 +15,7 @@
         <div class="nav container">
                 <img src="../images/logo.png" style="height:100px ; width:100px;"> 
                  <div class="searchArea">
-                    <input type="text"  id="searchbuttonid" placeholder="Search for a Product">
-                    <button class="searchbutton" onclick="searchProduct()">Search</button>
+                    <input type="text"  id="search-data" placeholder="Search for a Product">
                 </div>                          
         </div>
    </header>
@@ -91,10 +90,9 @@
  <script src="../service/dataservice.js" type="text/javascript"></script>
 
 <script>
-            //document.ready function
+   /*  document.ready function*/
             $(document).ready(()=>{
                 data.forEach((product)=>{
-                console.log(product);
                 var productList = '<div class="product-box">'+
             '<a href="details.html?id='+product.id+'"><img src="'+product.img[0]+'" alt="" class="product-img"></a>'+
             '<h2 class="product-title">'+product.title+'</h2>'+
@@ -108,41 +106,31 @@
         });
 
 
-//onclick search function
-function searchProduct(){
-$(".shop-content").html("");
-var productname=$("#searchbuttonid").val();
-if(productname==""){  
-alert("please enter value for search");  
-data.forEach( (product)=> {
-    var  productList = '<div class="product-box">'+
-            '<img src="'+product.img[0]+'" alt="" class="product-img">'+
-            '<h2 class="product-title">'+product.title+'</h2>'+
-            '<span class="rating">'+product.rating+'</span>'+
-            '<span class="price">'+product.price+'</span>'+
-        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
-            '</div>';
-        $('.shop-content').append(productList);
+/* search functionality*/
+let filterInput=document.getElementById("search-data");
+filterInput.addEventListener('keyup',filterProducts);
 
-});
-}
-else{
-$(".shop-content").html("");
-for(var i=0;i<data.length;i++){
-if(data[i].title.toLowerCase()==productname.toLowerCase()){
-var  productList = '<div class="product-box">'+
-            '<img src="'+data[i].img[0]+'" alt="" class="product-img">'+
-            '<h2 class="product-title">'+data[i].title+'</h2>'+
-            '<span class="rating">'+data[i].rating+'</span>'+
-            '<span class="price">'+data[i].price+'</span>'+
-        '<a href="reserve.html?id='+data[i].id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>'+
-            '</div>';
-        $('.shop-content').append(productList);            
+function filterProducts(){
+  const searchbox=document.getElementById("search-data").value.toLowerCase();
+    const storeitems=document.getElementById(".shop-content")
+  const product=document.querySelectorAll(".product-box")
+  const productname=document.getElementsByTagName("h2")
 
+    for(var i=0;i<productname.length;i++){
+      let match=product[i].getElementsByTagName('h2')[0];
+
+      if(match){
+        let textvalue=match.textContent || match.innerHTML;
+
+        if(textvalue.toLowerCase().indexOf(searchbox)>-1){
+          product[i].style.display="";
+        }else{
+          product[i].style.display="none";
+        }
+      }
+  }
 }
-}  
-}
-}
+
    </script>
    <!--scripts section ends-->
 

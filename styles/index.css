@@ -74,16 +74,6 @@ header{
 
 }
 
-.searchbutton{
-    height: 27px;
-    background-color: #fd4646;
-    width: 90px;
-    border-radius: 5px;
-    padding: 0 20px;
-    border: 1px solid #cecfd1;
-    
-}
-
 body .banner{
     margin-top: 50px;
     height: 500px;
