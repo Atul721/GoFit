@@ -62,14 +62,11 @@
   .form_item input[type="text"]:focus{
     border-color: #747272;
   }
-  .btn input[type="submit"]{
-    background: #747272;
+  .reservebutton{
+    background: #464545;
     border: 1px solid #747272;
     padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    letter-spacing: 1px;
-    border-radius: 3px;
+    width: 100%;    
     cursor: pointer;
     color: #fff;
   }

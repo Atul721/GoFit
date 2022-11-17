@@ -21,7 +21,7 @@
   <!--wrapper section starts-->
     <div class="wrapper">
         <div class="form_container">
-          <form name="form" id="myform" style="margin-top:90px;">
+          <form name="form" id="myform" style="margin-top:90px;" class="form-reserve">
             <div class="heading">
                 <h2>Reserve Product</h2>
                <a href="index.html"> <span class="material-symbols-outlined">Close</span></a>
@@ -33,36 +33,31 @@
                 <div class="form_item">
                     <label>First Name</label>
                     <input type="text" id="fname" required>
-                    <span id="fnameerror"></span>
                 </div>
                 <div class="form_item">
                     <label>Last Name</label>
-                    <input type="text" id="lname">
-                    <span id="lnameerror"></span>
+                    <input type="text" id="lname" required>
                 </div>
               </div>
               <div class="form_wrap">
                 <div class="form_item">
                   <label>Address</label>
-                  <input type="text" id="address" >
-                  <span id="addresserror"></span>
+                  <input type="text" id="address" required>
                 </div>
               </div>
               <div class="form_wrap">
                 <div class="form_item">
                   <label>Email Address</label>
-                  <input type="text" id="email">
-                  <span id="emailerror"></span>
+                  <input type="text" id="email" required>
                 </div>
               <div class="form_wrap">
                 <div class="form_item">
                   <label>Phone</label>
-                  <input type="text" id="phone" >
-                  <span id="phoneerror"></span>
+                  <input type="text" id="phone" required>
                </div>
              </div>
              <div class="btn">
-                <input type="submit" value="Submit" onclick="reserveItem()">
+                <button type="submit" value="Submit" class="reservebutton">Submit</button>
              </div>
          </form>
         </div>
@@ -79,7 +74,7 @@
   $(document).ready(()=>{
   const urlParams = new URLSearchParams(window.location.search);
 const productid = urlParams.get('id');
-var pname = "";
+var productname = "";
 var price="";
             for(var i=0;i<data.length;i++){                          
                if(productid==data[i].id){
@@ -92,21 +87,17 @@ var price="";
 document.getElementById('productreservedetail').innerHTML="You are about to reserve the " +productname+" product and the price is "+price;
             });
 
- //onclick function reserveItem()           
-function reserveItem(){
-var firstname= $("#fname").val();
-var lastname=$("#lname").val();
-var address=$("#address").val();
-var email=$("#email").val();
-var phone = $("#phone").val();
-if(firstname!=='' && lastname!==''&&address!==''&&email!==''&&phone!==''){
-    alert("Product has been reserved.");
-}
-else{
-    alert("Please fill all the fields");
-}
-}
 
+
+//submit function
+let submit=document.querySelector(".form-reserve");
+submit.addEventListener('submit',e=>{
+  e.preventDefault();
+  alert('Product has been reserved');
+  submit.reset();
+  window.location.href="../pages/index.html";
+  
+})
 
 </script>
 <!--scripts section ends-->
