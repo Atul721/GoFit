@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GoFit Application</title>
@@ -10,6 +10,7 @@
   
 </head>
 <body>
+    <!--header starts-->
     <header>
         <div class="nav container">
                 <img src="../images/logo.png" style="height:100px ; width:100px;"> 
@@ -19,6 +20,9 @@
                 </div>                          
         </div>
    </header>
+   <!--header ends-->
+
+   <!--banner section starts-->
    <div class="banner">
     <video type="video/mp4" loop autoplay muted controls id="vid" controls class="product-video"><source src="../videos/Banner1.mp4"/></video>
     <div class="quote">
@@ -26,13 +30,18 @@
         </br>
         <p class="quote2">OTHERS MAKE IT HAPPEN !!! </p>
     </div>
-</div>
+    </div>
+    <!--banne section ends-->
+
+    <!--products container section starts-->
    <section class="shop container">
     <h2 class="section-title">Our Products</h2>
-    <div class="shop-content">
-        
+    <div class="shop-content">        
     </div>
    </section>
+   <!--products container section ends-->
+
+   <!--footer starts-->
    <footer>
     <p>All Rights Reserved.</p>
   <footer class="footer-detail">
@@ -75,11 +84,14 @@
         </div>
     </div>
 </footer>
+<!--footer ends-->
+
+<!--scripts section starts-->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    
-<script src="../service/dataservice.js" type="text/javascript"></script>
+ <script src="../service/dataservice.js" type="text/javascript"></script>
+
 <script>
-console.log(data);
+            //document.ready function
             $(document).ready(()=>{
                 data.forEach((product)=>{
                 console.log(product);
@@ -95,7 +107,8 @@ console.log(data);
             });
         });
 
-//onclick function
+
+//onclick search function
 function searchProduct(){
 $(".shop-content").html("");
 var productname=$("#searchbuttonid").val();
@@ -131,5 +144,7 @@ var  productList = '<div class="product-box">'+
 }
 }
    </script>
+   <!--scripts section ends-->
+
 </body>
 </html>
