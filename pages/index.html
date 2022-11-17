@@ -112,9 +112,9 @@ filterInput.addEventListener('keyup',filterProducts);
 
 function filterProducts(){
   const searchbox=document.getElementById("search-data").value.toLowerCase();
-    const storeitems=document.getElementById(".shop-content")
-  const product=document.querySelectorAll(".product-box")
-  const productname=document.getElementsByTagName("h2")
+    const storeitems=document.getElementById(".shop-content");
+  const product=document.querySelectorAll(".product-box");
+  const productname=document.getElementsByTagName("h2");
 
     for(var i=0;i<productname.length;i++){
       let match=product[i].getElementsByTagName('h2')[0];
