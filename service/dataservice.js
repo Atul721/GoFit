@@ -1,7 +1,7 @@
 var data= [
         {
         "id": 1,
-        "img": ["../images/Dumbell.jpg","../images/Dumbell1.jpg","../images/Dumbell2.jpg","../images/Dumbell3.jpg"],
+        "img": ["../images/Dumbell.jpg","../images/Dumbell1.jpg","../images/Dumbell2.jpg"],
         "title": "Dumbell",
         "price": "€20",
         "rating" : "4.5 Rating",
@@ -10,7 +10,7 @@ var data= [
         }, 
         {
         "id": 2,
-        "img": ["../images/Gym-ball.jpg","../images/Gym-ball1.jpg","../images/Gym-ball2.jpg","../images/Gym-ball3.jpg"],
+        "img": ["../images/Gym-ball.jpg","../images/Gym-ball1.jpg","../images/Gym-ball2.jpg"],
         "title": "Gym Ball",
         "price": "€15",
         "rating" : "4.5 Rating",
@@ -19,7 +19,7 @@ var data= [
         },
         { 
         "id": 3,
-        "img": ["../images/Weight-Bar.jpg","../images/Weight-Bar1.jpg","../images/Weight-Bar2.jpg","../images/Weight-Bar3.jpg"],
+        "img": ["../images/Weight-Bar.jpg","../images/Weight-Bar1.jpg","../images/Weight-Bar2.jpg"],
         "title": "Weight Bar",
         "price": "€50",
         "rating" : "4.5 Rating",
@@ -28,7 +28,7 @@ var data= [
         },
         {
         "id": 4,
-        "img": ["../images/Treadmill.jpg","../images/Treadmill1.jpg","../images/Treadmill2.jpg","../images/Treadmill3.jpg"],
+        "img": ["../images/Treadmill.jpg","../images/Treadmill1.jpg","../images/Treadmill2.jpg"],
         "title": "Treadmill",
         "price": "€300",
         "rating" : "4.5 Rating",
@@ -37,7 +37,7 @@ var data= [
         },
         {
         "id": 5,
-        "img": ["../images/Battle-rope.jpg","../images/Battle-rope1.jpg","../images/Battle-rope2.jpg","../images/Battle-rope3.jpg"],
+        "img": ["../images/Battle-rope.jpg","../images/Battle-rope1.jpg","../images/Battle-rope2.jpg"],
         "title": "Battle Rope ",
         "price": "€100",
         "rating" : "4.5 Rating",
@@ -64,7 +64,7 @@ var data= [
         },
         {
         "id": 8,
-        "img": ["../images/kettle-bell.jpg","../images/kettle-bell1.jpg","../images/kettle-bell2.jpg","../images/kettle-bell3.jpg"],
+        "img": ["../images/kettle-bell.jpg","../images/kettle-bell1.jpg","../images/kettle-bell2.jpg"],
         "title": "kettlebell",
         "price": "€25",
         "rating" : "4.5 Rating",

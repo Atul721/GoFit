@@ -22,7 +22,7 @@
 
     <!--products detail section starts-->
     <section class="product details">
-        <h2 class="page-title">DETAILS</h2>
+        <h2 class="page-title">Details</h2>
         <div class="product-content">
         </div>
     </section>
@@ -30,7 +30,7 @@
 
     <!--products price starts-->
     <section class="product-price">
-        <h2 class="price-title">PRICE</h2>
+        <h2 class="price-title">Price</h2>
         <div class="price-content">
         </div>
     </section>
@@ -38,7 +38,7 @@
 
     <!--products description starts-->
     <section class="product-description">
-        <h2 class="description-title">DESCRIPTION</h2>
+        <h2 class="description-title">Description</h2>
         <div class="description-content">
         </div>
     </section>
@@ -46,7 +46,7 @@
 
     <!--products video starts-->
     <section class="product-video">
-        <h2 class="video-title">VIDEO</h2>
+        <h2 class="video-title">Video</h2>
         <div class="video-content">
         </div>
     </section>
@@ -117,7 +117,7 @@
                         '<img id="mainImg" src="' + product.img[0] + '" alt="" class="product-det-img">' +
                         `<div style="display:flex; height:70px; margin-right:10px;">${imageList}</div>`+
                         '<h2 class="product-title">' + product.title + '</h2>' +
-                        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>' 
+                        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>' +
                         '<p class="rating">' + product.rating + '</p>' +
                         '</div>';
                     $('.product-content').append(productList);
