@@ -63,8 +63,6 @@ header{
 
 .product-detail-box{
     margin-left: 5%;
-    /* max-width: max-content; */
-    /* max-height: 300px; */
     padding: 10px;
 }
 
@@ -110,13 +108,18 @@ header{
 }
 
 .reserve{
-    background-color: #787676;
+    background-color: var(--text-color);
     font-size: 2rem;
     font-weight: 600;
     cursor: pointer;
     margin-left: 0px;
-
+    color: white;
 }
+
+.reserve:hover{
+    background: hsl(250, 7%, 47%);
+}
+
 
 footer {
     text-align: center;
