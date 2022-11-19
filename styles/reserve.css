@@ -16,7 +16,7 @@
     padding: 10px;
   }
   .heading{
-    background: #747272;
+    background: #171427;
     margin: -30px;
     text-align: center;
     color: white;
@@ -66,12 +66,16 @@
     border-color: #747272;
   }
   .reservebutton{
-    background: #464545;
+    background: #171427;
     border: 1px solid #747272;
     padding: 10px;
     width: 100%;    
     cursor: pointer;
     color: #fff;
+  }
+
+  #productreservedetail{
+    font-size: 1.3rem;
   }
 
   @font-face {

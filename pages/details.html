@@ -22,11 +22,35 @@
 
     <!--products detail section starts-->
     <section class="product details">
-        <h2 class="page-title">Details</h2>
+        <h2 class="page-title">DETAILS</h2>
         <div class="product-content">
         </div>
     </section>
     <!--products detail section ends-->
+
+    <!--products price starts-->
+    <section class="product-price">
+        <h2 class="price-title">PRICE</h2>
+        <div class="price-content">
+        </div>
+    </section>
+    <!--products price ends-->
+
+    <!--products description starts-->
+    <section class="product-description">
+        <h2 class="description-title">DESCRIPTION</h2>
+        <div class="description-content">
+        </div>
+    </section>
+    <!--products description ends-->
+
+    <!--products video starts-->
+    <section class="product-video">
+        <h2 class="video-title">VIDEO</h2>
+        <div class="video-content">
+        </div>
+    </section>
+    <!--products video ends-->
 
     <!--footer starts-->
     <footer>
@@ -93,14 +117,29 @@
                         '<img id="mainImg" src="' + product.img[0] + '" alt="" class="product-det-img">' +
                         `<div style="display:flex; height:70px; margin-right:10px;">${imageList}</div>`+
                         '<h2 class="product-title">' + product.title + '</h2>' +
-                        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>' +
+                        '<a href="reserve.html?id='+product.id+'"><i class="bx bx-plus reserve" title="Reserve Product"></i></a>' 
                         '<p class="rating">' + product.rating + '</p>' +
-                        '<span class="price">' + product.price + '</span>' +
-                        '<p class="description">' + product.description + '</p>' +
-                        `<video type="video/mp4" autoplay="autoplay" controls class="product-video"><source src="${product.video}"/></video>` +
                         '</div>';
                     $('.product-content').append(productList);
+
+                    var priceList='<div class="price-detail-box">' +
+                         '<p class="price">' + product.price + '</p>'+
+                         '</div>';
+                    $('.price-content').append(priceList)
+
+                    var descriptionList='<div class="description-detail-box">' +
+                         '<p class="description">' + product.description + '</p>'+
+                         '</div>';
+                    $('.description-content').append(descriptionList)
+                    
+                    var videoList='<div class="video-detail-box">' +
+                        `<video type="video/mp4" autoplay="autoplay" controls class="product-video"><source src="${product.video}"/></video>` +
+                         '</div>';
+                    $('.video-content').append(videoList)
                 }
+
+                
+
 
             });
         });
