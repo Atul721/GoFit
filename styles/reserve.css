@@ -10,7 +10,7 @@
     background: white;
   }
   .wrapper{
-    max-width: 450px;
+    /* max-width: 100%; */
     width: 100%;
     margin: 30px auto 0;
     padding: 10px;
@@ -29,6 +29,9 @@
   .wrapper .form_container{
     background: rgb(255, 255, 255);
     padding: 30px;
+    width: 100%;
+    position:relative;
+    align-items: center;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
   }
@@ -70,6 +73,7 @@
     cursor: pointer;
     color: #fff;
   }
+
   @font-face {
     font-family: 'Material Symbols Outlined';
     font-style: normal;

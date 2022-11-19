@@ -63,8 +63,8 @@ header{
 
 .product-detail-box{
     margin-left: 5%;
-    max-width: 1-00px;
-    max-height: 300px;
+    /* max-width: max-content; */
+    /* max-height: 300px; */
     padding: 10px;
 }
 
@@ -85,7 +85,7 @@ header{
 }
 .product-video{
     margin: 0 auto;
-    max-width: 20%;
+    max-width: 50%;
     max-height: 1%;
     padding: 5px;
     position: relative;
@@ -114,35 +114,67 @@ header{
     font-size: 2rem;
     font-weight: 600;
     cursor: pointer;
+    margin-left: 0px;
 
 }
 
 footer {
     text-align: center;
-    padding-bottom: 10px;
+    padding: 3px;
     background-color: #747272;
     color: white;
+    width: 100%;
   }
 
-footer .footer-detail a{
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+
+.footer-detail {
+    background-color: #747272;
+    padding: 70px 0;
+    
+}
+
+.footer-detail-col {
+    width: 25%;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.footer-detail-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 35px;
     position: relative;
 }
 
-footer .footer-detail a::after{
+.footer-detail-col h4::before {
     content: '';
-    width: 2px;
-    background: #1f3368;
-    display: inline-block;
-    height: 100%;
-    right: -11px;
     position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 }
 
-footer .footer-detail a:hover{
-    text-decoration: underline;
+.footer-detail-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer-detail-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-detail-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 10px;
 }
 
 
