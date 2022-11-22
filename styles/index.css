@@ -129,6 +129,7 @@ body .banner .quote2{
     background-color: #171427;
 }
 
+
 .shop-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px,auto));
@@ -240,7 +241,7 @@ footer {
         padding: 15px;
     }
     section{
-        padding: 3rem 0 2rem;
+        padding: 1rem 0 2rem;
     }
     .container{
         margin: 0, auto;
@@ -262,7 +263,23 @@ footer {
 
     body .banner .quote{
         margin-top: 0px;
-        margin-right: opx;
+        margin-right: 1px;
+        max-width: 100%;
+        max-height: 28%;
+    }
+    
+    body .banner .quote .quote1{
+        margin-top: -27px;
+        margin-right: 1px;
+        max-width: 200%;
+        max-height: 25%;
+    }
+    
+    body .banner .quote .quote2{
+        margin-top: -24px;
+        margin-right: 1px;
+        max-width: 200%;
+        max-height: 25%;
     }
 }
 
